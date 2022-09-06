@@ -30,6 +30,25 @@ struct ContentView: View {
                 .frame(width: view.size.width, height: 180, alignment: .top)
                 .background(Color.purple)
                 
+                HStack {
+                    Button(action: {}) {
+                        Text("Hotéis")
+                            .font(.custom("Avenir Medium", size: 17))
+                            .foregroundColor(.white)
+                    }
+                    .frame(width: 100, height: 50)
+                    .background(Color.blue)
+                    
+                    Button(action: {}) {
+                        Text("Pacotes")
+                            .font(.custom("Avenir Medium", size: 17))
+                            .foregroundColor(.white)
+                    }
+                    .frame(width: 100, height: 50)
+                    .background(Color.orange)
+                }
+                .offset(y: -25)
+                
                 List {
                     Text("Rio de Janeiro")
                     Text("Ceará")
@@ -38,6 +57,7 @@ struct ContentView: View {
                 }
             }
         }
+        .edgesIgnoringSafeArea(.all)
     }
 }
 

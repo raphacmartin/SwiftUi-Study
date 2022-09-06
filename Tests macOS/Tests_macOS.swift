@@ -2,7 +2,7 @@
 //  Tests_macOS.swift
 //  Tests macOS
 //
-//  Created by Raphael Martin on 8/16/22.
+//  Created by Rapha on 8/29/22.
 //
 
 import XCTest
@@ -27,6 +27,7 @@ class Tests_macOS: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
+        // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
