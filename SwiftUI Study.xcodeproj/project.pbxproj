@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC576B8028CA135200ED17AD /* Dados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC576B7D28CA135200ED17AD /* Dados.swift */; };
+		FC576B8128CA135200ED17AD /* Dados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC576B7D28CA135200ED17AD /* Dados.swift */; };
+		FC576B8228CA135200ED17AD /* Viagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC576B7E28CA135200ED17AD /* Viagem.swift */; };
+		FC576B8328CA135200ED17AD /* Viagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC576B7E28CA135200ED17AD /* Viagem.swift */; };
+		FC576B8428CA135200ED17AD /* viagens.json in Resources */ = {isa = PBXBuildFile; fileRef = FC576B7F28CA135200ED17AD /* viagens.json */; };
+		FC576B8528CA135200ED17AD /* viagens.json in Resources */ = {isa = PBXBuildFile; fileRef = FC576B7F28CA135200ED17AD /* viagens.json */; };
 		FCDEC2BB28BCEAC20019A316 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEC2BA28BCEAC20019A316 /* Tests_iOS.swift */; };
 		FCDEC2BD28BCEAC20019A316 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEC2BC28BCEAC20019A316 /* Tests_iOSLaunchTests.swift */; };
 		FCDEC2C728BCEAC20019A316 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEC2C628BCEAC20019A316 /* Tests_macOS.swift */; };
@@ -37,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC576B7D28CA135200ED17AD /* Dados.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dados.swift; sourceTree = "<group>"; };
+		FC576B7E28CA135200ED17AD /* Viagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Viagem.swift; sourceTree = "<group>"; };
+		FC576B7F28CA135200ED17AD /* viagens.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = viagens.json; sourceTree = "<group>"; };
 		FCDEC2A228BCEABF0019A316 /* SwiftUI_StudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_StudyApp.swift; sourceTree = "<group>"; };
 		FCDEC2A328BCEABF0019A316 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FCDEC2A428BCEAC20019A316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC576B7C28CA135200ED17AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC576B7D28CA135200ED17AD /* Dados.swift */,
+				FC576B7E28CA135200ED17AD /* Viagem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FCDEC29C28BCEABE0019A316 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +115,8 @@
 		FCDEC2A128BCEABF0019A316 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				FC576B7C28CA135200ED17AD /* Models */,
+				FC576B7F28CA135200ED17AD /* viagens.json */,
 				FCDEC2A228BCEABF0019A316 /* SwiftUI_StudyApp.swift */,
 				FCDEC2A328BCEABF0019A316 /* ContentView.swift */,
 				FCDEC2A428BCEAC20019A316 /* Assets.xcassets */,
@@ -267,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCDEC2CE28BCEAC20019A316 /* Assets.xcassets in Resources */,
+				FC576B8428CA135200ED17AD /* viagens.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCDEC2CF28BCEAC20019A316 /* Assets.xcassets in Resources */,
+				FC576B8528CA135200ED17AD /* viagens.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +321,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC576B8228CA135200ED17AD /* Viagem.swift in Sources */,
 				FCDEC2CC28BCEAC20019A316 /* ContentView.swift in Sources */,
+				FC576B8028CA135200ED17AD /* Dados.swift in Sources */,
 				FCDEC2CA28BCEAC20019A316 /* SwiftUI_StudyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,7 +332,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC576B8328CA135200ED17AD /* Viagem.swift in Sources */,
 				FCDEC2CD28BCEAC20019A316 /* ContentView.swift in Sources */,
+				FC576B8128CA135200ED17AD /* Dados.swift in Sources */,
 				FCDEC2CB28BCEAC20019A316 /* SwiftUI_StudyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

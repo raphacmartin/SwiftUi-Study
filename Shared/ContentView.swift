@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         GeometryReader { view in
-            VStack {
+            VStack(spacing: 0) {
                 VStack {
                     Text("Viagens")
                         .foregroundColor(Color.white)
@@ -31,13 +31,18 @@ struct ContentView: View {
                 .background(Color.purple)
                 
                 HStack {
+                    Spacer()
+                    
                     Button(action: {}) {
                         Text("Hotéis")
                             .font(.custom("Avenir Medium", size: 17))
                             .foregroundColor(.white)
                     }
                     .frame(width: 100, height: 50)
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(.blue, lineWidth: 10))
                     .background(Color.blue)
+                    
+                    Spacer()
                     
                     Button(action: {}) {
                         Text("Pacotes")
@@ -45,19 +50,29 @@ struct ContentView: View {
                             .foregroundColor(.white)
                     }
                     .frame(width: 100, height: 50)
-                    .background(Color.orange)
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(.orange, lineWidth: 10))
+                    .background(.orange)
+                    
+                    Spacer()
                 }
                 .offset(y: -25)
                 
-                List {
-                    Text("Rio de Janeiro")
-                    Text("Ceará")
-                    Text("Atibaia")
-                    Text("São Paulo")
+                List (viagens) { viagem in
+                    VStack(alignment: .leading) {
+                        Text(viagem.titulo)
+                        Image(viagem.imagem)
+                            .resizable()
+                            .frame(height: 125)
+                        HStack {
+                            Text(viagem.quantidadeDeDias)
+                            Spacer()
+                            Text(viagem.valor)
+                        }
+                    }
                 }
+                .listStyle(PlainListStyle())
             }
         }
-        .edgesIgnoringSafeArea(.all)
     }
 }
 
