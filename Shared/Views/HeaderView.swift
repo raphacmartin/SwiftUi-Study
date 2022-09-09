@@ -1,16 +1,16 @@
 //
-//  ContentView.swift
-//  Shared
+//  HeaderView.swift
+//  SwiftUI Study
 //
-//  Created by Raphael Martin on 8/16/22.
+//  Created by Rapha on 9/9/22.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct HeaderView: View {
     var body: some View {
         GeometryReader { view in
-            VStack(spacing: 0) {
+            VStack {
                 VStack {
                     Text("Viagens")
                         .foregroundColor(Color.white)
@@ -56,28 +56,14 @@ struct ContentView: View {
                     Spacer()
                 }
                 .offset(y: -25)
-                
-                List (viagens) { viagem in
-                    VStack(alignment: .leading) {
-                        Text(viagem.titulo)
-                        Image(viagem.imagem)
-                            .resizable()
-                            .frame(height: 125)
-                        HStack {
-                            Text(viagem.quantidadeDeDias)
-                            Spacer()
-                            Text(viagem.valor)
-                        }
-                    }
-                }
-                .listStyle(PlainListStyle())
             }
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HeaderView()
+            .previewLayout(.fixed(width: 400, height: 220))
     }
 }
