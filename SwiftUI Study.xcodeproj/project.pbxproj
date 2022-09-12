@@ -17,6 +17,10 @@
 		FC576B8328CA135200ED17AD /* Viagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC576B7E28CA135200ED17AD /* Viagem.swift */; };
 		FC576B8428CA135200ED17AD /* viagens.json in Resources */ = {isa = PBXBuildFile; fileRef = FC576B7F28CA135200ED17AD /* viagens.json */; };
 		FC576B8528CA135200ED17AD /* viagens.json in Resources */ = {isa = PBXBuildFile; fileRef = FC576B7F28CA135200ED17AD /* viagens.json */; };
+		FCB205F828CF62690061F419 /* Sizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB205F728CF62690061F419 /* Sizing.swift */; };
+		FCB205F928CF62690061F419 /* Sizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB205F728CF62690061F419 /* Sizing.swift */; };
+		FCB205FB28CF63DC0061F419 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB205FA28CF63DC0061F419 /* Device.swift */; };
+		FCB205FC28CF63DC0061F419 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB205FA28CF63DC0061F419 /* Device.swift */; };
 		FCDEC2BB28BCEAC20019A316 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEC2BA28BCEAC20019A316 /* Tests_iOS.swift */; };
 		FCDEC2BD28BCEAC20019A316 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEC2BC28BCEAC20019A316 /* Tests_iOSLaunchTests.swift */; };
 		FCDEC2C728BCEAC20019A316 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDEC2C628BCEAC20019A316 /* Tests_macOS.swift */; };
@@ -52,6 +56,8 @@
 		FC576B7D28CA135200ED17AD /* Dados.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dados.swift; sourceTree = "<group>"; };
 		FC576B7E28CA135200ED17AD /* Viagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Viagem.swift; sourceTree = "<group>"; };
 		FC576B7F28CA135200ED17AD /* viagens.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = viagens.json; sourceTree = "<group>"; };
+		FCB205F728CF62690061F419 /* Sizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizing.swift; sourceTree = "<group>"; };
+		FCB205FA28CF63DC0061F419 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		FCDEC2A228BCEABF0019A316 /* SwiftUI_StudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_StudyApp.swift; sourceTree = "<group>"; };
 		FCDEC2A328BCEABF0019A316 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FCDEC2A428BCEAC20019A316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +110,8 @@
 				FCDEC2A328BCEABF0019A316 /* ContentView.swift */,
 				FC2C513828CB6B7300BE2527 /* HeaderView.swift */,
 				FC2C513B28CB6C4300BE2527 /* CelulaViagemView.swift */,
+				FCB205F728CF62690061F419 /* Sizing.swift */,
+				FCB205FA28CF63DC0061F419 /* Device.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -340,9 +348,11 @@
 				FC2C513928CB6B7300BE2527 /* HeaderView.swift in Sources */,
 				FC576B8228CA135200ED17AD /* Viagem.swift in Sources */,
 				FCDEC2CC28BCEAC20019A316 /* ContentView.swift in Sources */,
+				FCB205F828CF62690061F419 /* Sizing.swift in Sources */,
 				FC576B8028CA135200ED17AD /* Dados.swift in Sources */,
 				FCDEC2CA28BCEAC20019A316 /* SwiftUI_StudyApp.swift in Sources */,
 				FC2C513C28CB6C4300BE2527 /* CelulaViagemView.swift in Sources */,
+				FCB205FB28CF63DC0061F419 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,9 +363,11 @@
 				FC2C513A28CB6B7300BE2527 /* HeaderView.swift in Sources */,
 				FC576B8328CA135200ED17AD /* Viagem.swift in Sources */,
 				FCDEC2CD28BCEAC20019A316 /* ContentView.swift in Sources */,
+				FCB205F928CF62690061F419 /* Sizing.swift in Sources */,
 				FC576B8128CA135200ED17AD /* Dados.swift in Sources */,
 				FCDEC2CB28BCEAC20019A316 /* SwiftUI_StudyApp.swift in Sources */,
 				FC2C513D28CB6C4300BE2527 /* CelulaViagemView.swift in Sources */,
+				FCB205FC28CF63DC0061F419 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

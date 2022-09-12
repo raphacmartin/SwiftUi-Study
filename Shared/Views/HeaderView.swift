@@ -14,16 +14,16 @@ struct HeaderView: View {
                 VStack {
                     Text("Viagens")
                         .foregroundColor(Color.white)
-                        .font(.custom("Avenir Black", size: 20))
+                        .font(.custom("Avenir Black", size: .fontSizeMedium))
                         .padding(.top, 15)
                     Text("ESPECIAL")
                         .foregroundColor(Color.white)
-                        .font(.custom("Avenir Book", size: 20))
+                        .font(.custom("Avenir Book", size: .fontSizeMedium))
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, 30)
                     Text("BRASIL")
                         .foregroundColor(Color.white)
-                        .font(.custom("Avenir Black", size: 20))
+                        .font(.custom("Avenir Black", size: .fontSizeMedium))
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, 30)
                 }
@@ -35,7 +35,7 @@ struct HeaderView: View {
                     
                     Button(action: {}) {
                         Text("Hotéis")
-                            .font(.custom("Avenir Medium", size: 17))
+                            .font(.custom("Avenir Medium", size: .fontSizeRegular))
                             .foregroundColor(.white)
                     }
                     .frame(width: 100, height: 50)
@@ -46,7 +46,7 @@ struct HeaderView: View {
                     
                     Button(action: {}) {
                         Text("Pacotes")
-                            .font(.custom("Avenir Medium", size: 17))
+                            .font(.custom("Avenir Medium", size: .fontSizeRegular))
                             .foregroundColor(.white)
                     }
                     .frame(width: 100, height: 50)
