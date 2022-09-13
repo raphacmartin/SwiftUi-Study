@@ -10,6 +10,13 @@ extension CGFloat {
             return 140.0
         }
     }
+    public static func cellImageHeight(for sizeClass: UserInterfaceSizeClass?) -> CGFloat {
+        if sizeClass == .regular {
+            return 200.0
+        } else {
+            return 125.0
+        }
+    }
     
     // MARK: Font Sizes
     public static func fontSizeMedium(for sizeClass: UserInterfaceSizeClass?) -> CGFloat {
