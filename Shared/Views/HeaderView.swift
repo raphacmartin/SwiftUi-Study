@@ -18,7 +18,7 @@ struct HeaderView: View {
                     Text("Viagens")
                         .foregroundColor(Color.white)
                         .font(.custom("Avenir Black", size: .fontSizeMedium(for: horizontalSizeClass)))
-                        .padding(.top, 15)
+                        .padding(.top, 25)
                     Text("ESPECIAL")
                         .foregroundColor(Color.white)
                         .font(.custom("Avenir Book", size: .fontSizeMedium(for: horizontalSizeClass)))

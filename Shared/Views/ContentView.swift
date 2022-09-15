@@ -9,17 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        GeometryReader { view in
-            VStack(spacing: 0) {
-                HeaderView()
-                    .frame(height: 220)
-                
-                List (viagens) { viagem in
-                    CelulaViagemView(viagem: viagem)
+        NavigationView {
+            GeometryReader { view in
+                VStack(spacing: 0) {
+                    HeaderView()
+                        .frame(height: 220)
+                    
+                    List (viagens) { viagem in
+                        NavigationLink {
+                            MapaView(coordinate: viagem.localizacao)
+                                .navigationBarTitle(viagem.titulo)
+                        } label: {
+                            CelulaViagemView(viagem: viagem)
+                        }
+                    }
+                    .listStyle(PlainListStyle())
                 }
-                .listStyle(PlainListStyle())
-            }
-        }
+            }.edgesIgnoringSafeArea(.all)
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
