@@ -14,8 +14,9 @@ struct SecaoPacotesView: View {
     var body: some View {
         VStack {
             Text(continente.rawValue)
-                .font(.custom("Avenir Black", size: 20))
+                .font(.headline)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(5)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
@@ -25,6 +26,7 @@ struct SecaoPacotesView: View {
                 }
             }
         }
+        .background(Color(red: 0.98, green: 0.98, blue: 0.98))
         .padding(.bottom, 24.0)
     }
 }
@@ -32,5 +34,6 @@ struct SecaoPacotesView: View {
 struct SecaoPacotesView_Previews: PreviewProvider {
     static var previews: some View {
         SecaoPacotesView(continente: .americaDoNorte, pacotes: pacotesViagem)
+            .previewLayout(.fixed(width: 600, height: 300))
     }
 }
