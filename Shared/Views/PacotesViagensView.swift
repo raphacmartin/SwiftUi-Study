@@ -14,14 +14,16 @@ struct PacotesViagensView: View {
                 .font(.custom("Avenir Medium", size: 30))
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            ScrollView {
-                ForEach(PacoteDeViagem.Categoria.allCases, id: \.self) { continente in
-                    SecaoPacotesView(
-                        continente: continente,
-                        pacotes: pacotesViagem.filter { $0.categoria == continente}
-                    )
-                }
+            List(PacoteDeViagem.Categoria.allCases) { continent in
+                SecaoPacotesView(
+                    continente: continent,
+                    pacotes: pacotesViagem.filter { $0.categoria == continent}
+                )
+                .listRowInsets(EdgeInsets())
+                .listRowSeparator(.hidden)
+                .padding(.bottom, 24.0)
             }
+            .listStyle(.plain)
         }.padding(.horizontal, 10)
     }
 }

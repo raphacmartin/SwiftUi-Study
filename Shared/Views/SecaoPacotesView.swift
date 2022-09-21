@@ -27,7 +27,6 @@ struct SecaoPacotesView: View {
             }
         }
         .background(Color(red: 0.98, green: 0.98, blue: 0.98))
-        .padding(.bottom, 24.0)
     }
 }
 

@@ -24,7 +24,9 @@ struct PacoteDeViagem: Codable, Identifiable {
     var imagens: [String]
     var itensInclusos: [Item]
 
-    enum Categoria: String, CaseIterable, Codable, Hashable {
+    enum Categoria: String, CaseIterable, Codable, Hashable, Identifiable {
+        var id: Categoria { self }
+        
         case europa = "Europa"
         case americaDoSul = "America do sul"
         case americaDoNorte = "America do norte"
