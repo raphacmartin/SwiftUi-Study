@@ -2,6 +2,10 @@ import Foundation
 import MapKit
 
 struct Trip: Hashable, Codable, Identifiable {
+    enum CodingKeys: String, CodingKey {
+        case id, title = "titulo", image = "imagem", numberOfDays = "quantidadeDeDias", value = "valor", coordinates = "coordenada"
+    }
+    
     var id: Int
     var title: String
     var image: String
