@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  FeaturedTripsView.swift
 //  Shared
 //
 //  Created by Raphael Martin on 8/16/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct FeaturedTripsView: View {
     var body: some View {
         NavigationView {
             GeometryReader { view in
@@ -32,6 +32,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        FeaturedTripsView()
     }
 }
