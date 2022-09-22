@@ -1,15 +1,7 @@
-//
-//  Dados.swift
-//  new-alura-viagens
-//
-//  Created by Ândriu Felipe Coelho on 23/01/20.
-//  Copyright © 2020 Ândriu Felipe Coelho. All rights reserved.
-//
-
 import Foundation
 
-let viagens: [Viagem] = load("viagens.json")
-let pacotesViagem: [PacoteDeViagem] = load("pacotes-viagens.json")
+let trips: [Trip] = load("viagens.json")
+let tripPackages: [TripPackage] = load("pacotes-viagens.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

@@ -15,12 +15,12 @@ struct ContentView: View {
                     HeaderView()
                         .frame(height: 220)
                     
-                    List (viagens) { viagem in
+                    List (trips) { trip in
                         NavigationLink {
-                            MapaView(coordinate: viagem.localizacao)
-                                .navigationBarTitle(viagem.titulo)
+                            MapView(coordinate: trip.location)
+                                .navigationBarTitle(trip.title)
                         } label: {
-                            CelulaViagemView(viagem: viagem)
+                            TripCellView(trip: trip)
                         }
                     }
                     .listStyle(PlainListStyle())

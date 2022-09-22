@@ -8,7 +8,7 @@
 import SwiftUI
 import MapKit
 
-struct MapaView: UIViewRepresentable {
+struct MapView: UIViewRepresentable {
     var coordinate: CLLocationCoordinate2D
     
     func makeUIView(context: Context) -> MKMapView {
@@ -24,6 +24,6 @@ struct MapaView: UIViewRepresentable {
 
 struct MapaView_Previews: PreviewProvider {
     static var previews: some View {
-        MapaView(coordinate: viagens[0].localizacao)
+        MapView(coordinate: trips[0].location)
     }
 }

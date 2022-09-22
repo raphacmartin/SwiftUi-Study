@@ -1,5 +1,5 @@
 //
-//  PacoteViagemCell.swift
+//  PackageCellView.swift
 //  SwiftUI Study
 //
 //  Created by Rapha on 9/19/22.
@@ -7,31 +7,31 @@
 
 import SwiftUI
 
-struct PacoteViagemCell: View {
-    let pacoteViagem: PacoteDeViagem
+struct PackageCellView: View {
+    let tripPackage: TripPackage
     
     var body: some View {
         VStack {
-            Image(pacoteViagem.imagens[0])
+            Image(tripPackage.images[0])
                 .resizable()
                 .frame(width: 180, height: 135)
                 .aspectRatio(contentMode: .fill)
                 .clipped()
             
             VStack(spacing: 0) {
-                Text(pacoteViagem.titulo)
+                Text(tripPackage.title)
                     .font(.custom("Avenir Black", size: 12))
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                Text(pacoteViagem.descricao)
+                Text(tripPackage.description)
                     .font(.custom("Avenir", size: 10))
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                Text(pacoteViagem.dataValidade)
+                Text(tripPackage.date)
                     .font(.custom("Avenir", size: 10))
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 Text("À partir de")
                     .font(.custom("Avenir", size: 9))
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
-                Text("R$ \(pacoteViagem.valor)")
+                Text("R$ \(tripPackage.value)")
                     .font(.custom("Avenir Black", size: 16))
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                     .foregroundColor(.orange)
@@ -54,7 +54,7 @@ struct PacoteViagemCell: View {
 
 struct PacoteViagemCell_Previews: PreviewProvider {
     static var previews: some View {
-        PacoteViagemCell(pacoteViagem: pacotesViagem[0])
+        PackageCellView(tripPackage: tripPackages[0])
             .previewLayout(.fixed(width: 190, height: 260))
     }
 }
