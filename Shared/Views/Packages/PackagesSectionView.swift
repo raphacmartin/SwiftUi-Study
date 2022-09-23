@@ -21,7 +21,13 @@ struct PackagesSectionView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(packages) { package in
-                        PackageCellView(tripPackage: package)
+                        NavigationLink(
+                            destination: PackageDetailsView(package: package)
+                                .navigationTitle("")
+                                .navigationBarHidden(true)
+                        ) {
+                            PackageCellView(tripPackage: package)
+                        }.buttonStyle(.plain)
                     }
                 }
             }

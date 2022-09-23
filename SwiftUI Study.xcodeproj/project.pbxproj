@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FC08634E28DC8BD400918264 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC08634D28DC8BD400918264 /* HomeTabView.swift */; };
 		FC08634F28DC8BD400918264 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC08634D28DC8BD400918264 /* HomeTabView.swift */; };
+		FC08635128DC902D00918264 /* PackageDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC08635028DC902D00918264 /* PackageDetailsView.swift */; };
+		FC08635228DC902D00918264 /* PackageDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC08635028DC902D00918264 /* PackageDetailsView.swift */; };
 		FC2C513928CB6B7300BE2527 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C513828CB6B7300BE2527 /* HeaderView.swift */; };
 		FC2C513A28CB6B7300BE2527 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C513828CB6B7300BE2527 /* HeaderView.swift */; };
 		FC2C513C28CB6C4300BE2527 /* TripCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C513B28CB6C4300BE2527 /* TripCellView.swift */; };
@@ -64,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		FC08634D28DC8BD400918264 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		FC08635028DC902D00918264 /* PackageDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsView.swift; sourceTree = "<group>"; };
 		FC2C513828CB6B7300BE2527 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		FC2C513B28CB6C4300BE2527 /* TripCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCellView.swift; sourceTree = "<group>"; };
 		FC576B7D28CA135200ED17AD /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -139,6 +142,7 @@
 				FCA9E22E28D88EBF00BD8E3D /* TripPackagesView.swift */,
 				FCA9E23828D897E100BD8E3D /* PackagesSectionView.swift */,
 				FCA9E23B28D898B500BD8E3D /* PackageCellView.swift */,
+				FC08635028DC902D00918264 /* PackageDetailsView.swift */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -403,6 +407,7 @@
 				FC576B8228CA135200ED17AD /* Trip.swift in Sources */,
 				FCDEC2CC28BCEAC20019A316 /* FeaturedTripsView.swift in Sources */,
 				FCA9E23C28D898B500BD8E3D /* PackageCellView.swift in Sources */,
+				FC08635128DC902D00918264 /* PackageDetailsView.swift in Sources */,
 				FCB205F828CF62690061F419 /* Sizing.swift in Sources */,
 				FC576B8028CA135200ED17AD /* Data.swift in Sources */,
 				FCDEC2CA28BCEAC20019A316 /* SwiftUI_StudyApp.swift in Sources */,
@@ -423,6 +428,7 @@
 				FC576B8328CA135200ED17AD /* Trip.swift in Sources */,
 				FCDEC2CD28BCEAC20019A316 /* FeaturedTripsView.swift in Sources */,
 				FCA9E23D28D898B500BD8E3D /* PackageCellView.swift in Sources */,
+				FC08635228DC902D00918264 /* PackageDetailsView.swift in Sources */,
 				FCB205F928CF62690061F419 /* Sizing.swift in Sources */,
 				FC576B8128CA135200ED17AD /* Data.swift in Sources */,
 				FCDEC2CB28BCEAC20019A316 /* SwiftUI_StudyApp.swift in Sources */,
