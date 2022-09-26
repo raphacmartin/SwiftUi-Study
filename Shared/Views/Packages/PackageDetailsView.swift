@@ -10,12 +10,28 @@ import SwiftUI
 struct PackageDetailsView: View {
     let package: TripPackage
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         ScrollView (showsIndicators: false) {
             VStack {
-                Image(package.images[0])
-                    .resizable()
-                    .frame(height: 200)
+                ZStack(alignment: .top) {
+                    Image(package.images[0])
+                        .resizable()
+                        .frame(height: 200)
+                    
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Image("icone-voltar")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 20, height: 20, alignment: .leading)
+                            .padding(10)
+                            .padding(.top, 20)
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                }
                 
                 VStack {
                     Text(package.title.uppercased())
@@ -86,7 +102,20 @@ struct PackageDetailsView: View {
                     
                     Divider()
                     
-                }.padding(.horizontal, 0)
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Text("Escolher opção")
+                            .frame(maxWidth: .infinity, alignment: .center)
+                            .font(.custom("Avenir Black", size: 16))
+                            .foregroundColor(.white)
+                    }
+                    .frame(width: .infinity, height: 40)
+                    .background(Color.teal)
+                    
+                }
+                .padding(.horizontal, 10)
+                .padding(.bottom, 10)
             }
         }
         .edgesIgnoringSafeArea(.top)
