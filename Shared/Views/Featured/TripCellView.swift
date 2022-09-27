@@ -7,7 +7,11 @@
 
 import SwiftUI
 
-struct TripCellView: View {
+struct TripCellView: ResponsiveView {
+    var resources: ResponsiveResources {
+        ResponsiveResources(sizeClass: horizontalSizeClass)
+    }
+    
     var trip: Trip
     
     @Environment(\.horizontalSizeClass)
@@ -16,7 +20,7 @@ struct TripCellView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(trip.title)
-                .font(.custom("Avenir", size: .fontSizeRegular(for: horizontalSizeClass)))
+                .font(resources.labelFont)
             Image(trip.image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
@@ -24,10 +28,10 @@ struct TripCellView: View {
                 .clipped()
             HStack {
                 Text(trip.numberOfDays)
-                    .font(.custom("Avenir", size: .fontSizeRegular(for: horizontalSizeClass)))
+                    .font(resources.labelFont)
                 Spacer()
                 Text(trip.value)
-                    .font(.custom("Avenir", size: .fontSizeRegular(for: horizontalSizeClass)))
+                    .font(resources.labelFont)
             }
         }
     }

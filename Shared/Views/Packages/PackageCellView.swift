@@ -7,8 +7,15 @@
 
 import SwiftUI
 
-struct PackageCellView: View {
+struct PackageCellView: ResponsiveView {
+    var resources: ResponsiveResources {
+        ResponsiveResources(sizeClass: horizontalSizeClass)
+    }
+    
     let tripPackage: TripPackage
+    
+    @Environment(\.horizontalSizeClass)
+    var horizontalSizeClass
     
     var body: some View {
         VStack {
@@ -20,27 +27,27 @@ struct PackageCellView: View {
             
             VStack(spacing: 0) {
                 Text(tripPackage.title)
-                    .font(.custom("Avenir Black", size: 12))
+                    .font(resources.cellTitleFont)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 Text(tripPackage.description)
-                    .font(.custom("Avenir", size: 10))
+                    .font(resources.labelSmallFont)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 Text(tripPackage.date)
-                    .font(.custom("Avenir", size: 10))
+                    .font(resources.labelSmallFont)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                 Text("À partir de")
-                    .font(.custom("Avenir", size: 9))
+                    .font(resources.labelExtraSmallFont)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                 Text("R$ \(tripPackage.value)")
-                    .font(.custom("Avenir Black", size: 16))
+                    .font(resources.highlightFont)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                     .foregroundColor(.orange)
                 
                 Text("em até 12x")
-                    .font(.custom("Avenir", size: 9))
+                    .font(resources.labelExtraSmallFont)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                 Text("cancelamento grátis")
-                    .font(.custom("Avenir Black", size: 9))
+                    .font(resources.highlightExtraSmallFont)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                     .foregroundColor(.green)
                 

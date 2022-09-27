@@ -7,7 +7,11 @@
 
 import SwiftUI
 
-struct HeaderView: View {
+struct HeaderView: ResponsiveView {
+    var resources: ResponsiveResources {
+        ResponsiveResources(sizeClass: horizontalSizeClass)
+    }
+    
     @Environment(\.horizontalSizeClass)
     var horizontalSizeClass
     
@@ -17,16 +21,16 @@ struct HeaderView: View {
                 VStack {
                     Text("Viagens")
                         .foregroundColor(Color.white)
-                        .font(.custom("Avenir Black", size: .fontSizeMedium(for: horizontalSizeClass)))
+                        .font(resources.pageTitleFont)
                         .padding(.top, 25)
                     Text("ESPECIAL")
                         .foregroundColor(Color.white)
-                        .font(.custom("Avenir Book", size: .fontSizeMedium(for: horizontalSizeClass)))
+                        .font(resources.subtitleFont)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, 30)
                     Text("BRASIL")
                         .foregroundColor(Color.white)
-                        .font(.custom("Avenir Black", size: .fontSizeMedium(for: horizontalSizeClass)))
+                        .font(resources.pageTitleFont)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, 30)
                 }
@@ -38,7 +42,7 @@ struct HeaderView: View {
                     
                     Button(action: {}) {
                         Text("Hotéis")
-                            .font(.custom("Avenir Medium", size: .fontSizeRegular(for: horizontalSizeClass)))
+                            .font(resources.buttonLabelFont)
                             .foregroundColor(.white)
                     }
                     .frame(width: .buttonWidth(for: horizontalSizeClass), height: .buttonHeight(for: horizontalSizeClass))
@@ -49,7 +53,7 @@ struct HeaderView: View {
                     
                     Button(action: {}) {
                         Text("Pacotes")
-                            .font(.custom("Avenir Medium", size: .fontSizeRegular(for: horizontalSizeClass)))
+                            .font(resources.buttonLabelFont)
                             .foregroundColor(.white)
                     }
                     .frame(width: .buttonWidth(for: horizontalSizeClass), height: .buttonHeight(for: horizontalSizeClass))

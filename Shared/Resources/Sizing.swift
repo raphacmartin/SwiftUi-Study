@@ -19,18 +19,30 @@ extension CGFloat {
     }
     
     // MARK: Font Sizes
-    public static func fontSizeMedium(for sizeClass: UserInterfaceSizeClass?) -> CGFloat {
-        if sizeClass == .regular {
-            return 30.0
-        } else {
-            return 20.0
-        }
+    public static func fontSizeExtraSmall(for sizeClass: UserInterfaceSizeClass?) -> CGFloat {
+        return responsiveFontSize(for: sizeClass, with: 9)
     }
-    public static func fontSizeRegular(for sizeClass: UserInterfaceSizeClass?) -> CGFloat {
+    public static func fontSizeSmall(for sizeClass: UserInterfaceSizeClass?) -> CGFloat {
+        return responsiveFontSize(for: sizeClass, with: 10)
+    }
+    public static func fontSizeMedium(for sizeClass: UserInterfaceSizeClass?) -> CGFloat {
+        return responsiveFontSize(for: sizeClass, with: 12)
+    }
+    public static func fontSizeLarge(for sizeClass: UserInterfaceSizeClass?) -> CGFloat {
+        return responsiveFontSize(for: sizeClass, with: 16)
+    }
+    public static func fontSizeExtraLarge(for sizeClass: UserInterfaceSizeClass?) -> CGFloat {
+        return responsiveFontSize(for: sizeClass, with: 20)
+    }
+    public static func fontSizeHeading(for sizeClass: UserInterfaceSizeClass?) -> CGFloat {
+        return responsiveFontSize(for: sizeClass, with: 26)
+    }
+    
+    private static func responsiveFontSize(for sizeClass: UserInterfaceSizeClass?, with baseSize: CGFloat) -> CGFloat {
         if sizeClass == .regular {
-            return 24.0
+            return baseSize * 1.5
         } else {
-            return 17.0
+            return baseSize
         }
     }
     

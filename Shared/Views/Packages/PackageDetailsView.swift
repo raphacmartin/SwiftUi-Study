@@ -7,10 +7,16 @@
 
 import SwiftUI
 
-struct PackageDetailsView: View {
+struct PackageDetailsView: ResponsiveView {
+    var resources: ResponsiveResources {
+        ResponsiveResources(sizeClass: horizontalSizeClass)
+    }
+    
     let package: TripPackage
     
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.horizontalSizeClass)
+    var horizontalSizeClass
     
     var body: some View {
         ScrollView (showsIndicators: false) {
@@ -35,18 +41,18 @@ struct PackageDetailsView: View {
                 
                 VStack {
                     Text(package.title.uppercased())
-                        .font(.custom("Avenir Black", size: 26))
+                        .font(resources.headingFont)
                         .foregroundColor(.gray)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
                     Text(package.description)
-                        .font(.custom("Avenir", size: 16))
+                        .font(resources.labelFont)
                         .foregroundColor(.gray)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.bottom, 10)
                     
                     Text(package.details)
-                        .font(.custom("Avenir Black", size: 16))
+                        .font(resources.highlightFont)
                         .foregroundColor(.gray)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.bottom, 10)
@@ -54,22 +60,22 @@ struct PackageDetailsView: View {
                     HStack {
                         VStack {
                             Text("Válido para o período de:")
-                                .font(.custom("Avenir", size: 14))
+                                .font(resources.labelFont)
                                 .foregroundColor(.gray)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             Text(package.date)
-                                .font(.custom("Avenir", size: 14))
+                                .font(resources.labelFont)
                                 .foregroundColor(.gray)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
                         
                         VStack {
                             Text("R$ \(package.value)")
-                                .font(.custom("Avenir Black", size: 25))
+                                .font(resources.headingFont)
                                 .foregroundColor(.orange)
                                 .frame(maxWidth: .infinity, alignment: .trailing)
                             Text("Sem taxas em até 12x")
-                                .font(.custom("Avenir", size: 14))
+                                .font(resources.labelFont)
                                 .foregroundColor(.gray)
                                 .frame(maxWidth: .infinity, alignment: .trailing)
                             
@@ -79,7 +85,7 @@ struct PackageDetailsView: View {
                     Divider()
                     
                     Text("O que está incluso")
-                        .font(.custom("Avenir", size: 20))
+                        .font(resources.subtitleFont)
                         .foregroundColor(.gray)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
@@ -87,14 +93,14 @@ struct PackageDetailsView: View {
                         VStack {
                             Image("icone-apartamento")
                             Text("Apartamento")
-                                .font(.custom("Avenir", size: 14))
+                                .font(resources.labelFont)
                                 .foregroundColor(.gray)
                                 .frame(maxWidth: .infinity)
                         }
                         VStack {
                             Image("icone-aviao")
                             Text("Passagem aérea")
-                                .font(.custom("Avenir", size: 14))
+                                .font(resources.labelFont)
                                 .foregroundColor(.gray)
                                 .frame(maxWidth: .infinity)
                         }
@@ -107,7 +113,7 @@ struct PackageDetailsView: View {
                     } label: {
                         Text("Escolher opção")
                             .frame(maxWidth: .infinity, alignment: .center)
-                            .font(.custom("Avenir Black", size: 16))
+                            .font(resources.highlightFont)
                             .foregroundColor(.white)
                     }
                     .frame(width: .infinity, height: 40)
