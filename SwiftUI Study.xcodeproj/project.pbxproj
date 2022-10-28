@@ -59,6 +59,8 @@
 		FCA9E23828D897E100BD8E3D /* PackagesSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesSectionView.swift; sourceTree = "<group>"; };
 		FCA9E23B28D898B500BD8E3D /* PackageCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageCellView.swift; sourceTree = "<group>"; };
 		FCB205F728CF62690061F419 /* Sizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizing.swift; sourceTree = "<group>"; };
+		FCBDECB8290C1F0400A1CEE2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FCBDECB9290C233600A1CEE2 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		FCCD811C28E316D700DE2FA6 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		FCCD811F28E3193500DE2FA6 /* ResponsiveResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsiveResources.swift; sourceTree = "<group>"; };
 		FCCD812228E31A6F00DE2FA6 /* ResponsiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsiveView.swift; sourceTree = "<group>"; };
@@ -163,6 +165,8 @@
 		FCDEC29C28BCEABE0019A316 = {
 			isa = PBXGroup;
 			children = (
+				FCBDECB8290C1F0400A1CEE2 /* README.md */,
+				FCBDECB9290C233600A1CEE2 /* home.png */,
 				FC45D0DB28E47AD6006415FC /* Localizable.strings */,
 				FCDEC2A128BCEABF0019A316 /* Shared */,
 				FCDEC2B928BCEAC20019A316 /* Tests iOS */,
