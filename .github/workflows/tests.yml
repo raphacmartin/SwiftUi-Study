@@ -1,0 +1,13 @@
+name: tests
+
+on: [push]
+
+jobs:
+  run_tests:
+    runs-on: macos-12.6
+    steps:
+    - uses: actions/checkout@v1
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_13.4.1.app && /usr/bin/xcodebuild -version
+    - name: Run tests
+      run: xcodebuild test -project "SwiftUI Study.xcodeproj" -scheme "SwiftUI Study (iOS)" -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=15.5' | xcpretty && exit ${PIPESTATUS[0]}
